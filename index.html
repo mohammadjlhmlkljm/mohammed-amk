@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Hole In One</title>
+    <link rel="stylesheet" href="index.css">
+        <!-- Boxicons link -->
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+        <!-- Remix Icons link -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    
+        <!-- Google Fonts link -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body >
+
+   <div class="container"  data-aos="fade-right" data-aos-duration="1400">
+      <!-- Header -->
+      <header>
+        <a href="#" class="logo">
+            <img src="images/logoo_cropped.png" alt="Logo">
+        </a>
+        <ul class="navlist">
+            <li><a href="index.html">About</a></li>
+            <li><a href="Products.html">Products</a></li>
+            <li><a href="Facilities.html">Facilities</a></li>
+
+        </ul>
+        <div class="right-content">
+            <a href="Sign In.html" class="nav-btn">Sign In</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    
+    </header>
+      <div class="content"> <!-- تأكد من تصحيح الاسم هنا -->
+  
+        <section class="hero">
+            <div class="hero-text">
+                <h2 data-aos="fade-right" data-aos-duration="1400" >  Welcome to Hole In One – Where Luxury Meets Nature</h2>
+                <p data-aos="fade-right" data-aos-duration="1400" data-aos-delay="300">Experience a unique and unforgettable getaway at Hole In One Resort, where the beauty of nature blends seamlessly with world-class golf facilities. Whether you're a seasoned pro or a beginner, we are here to provide you with an exceptional experience that you'll cherish forever.
+
+                    At Hole In One, we pride ourselves on offering a wide range of amenities designed to meet all your needs. From our stunning golf courses to luxurious accommodations, exquisite dining options, and state-of-the-art training facilities, we have everything you need for a relaxing and enjoyable stay.
+                    
+                    Indulge in the perfect blend of relaxation and adventure, surrounded by breathtaking landscapes and unparalleled hospitality. Discover why Hole In One is the ultimate destination for golf enthusiasts and luxury seekers alike.</p>
+                <a href="Products.html" class="btn">Get strted</a>
+            </div>
+        
+        </section>
+
+        <div class="image" data-aos="zoom-in" data-aos-duration="1400">
+            <img src="images/image.png" alt="Shoes">
+
+        </div>
+</div>
+
+<div class="icons">
+    <a href="https://web.facebook.com/profile.php?id=61551738759630&sk=about&locale=ar_AR" data-aos="fade-in" data-aos-duration="1400" data-aos-delay="600"><i class="ri-facebook-line"></i></a>
+    <a href="#" data-aos="fade-in" data-aos-duration="1400" data-aos-delay="700"><i class="ri-youtube-fill"></i></a>
+    <a href="#" data-aos="fade-in" data-aos-duration="1400" data-aos-delay="800"><i class="ri-instagram-fill"></i></a>
+</div>
+
+
+<div class="scroll" data-aos="zoom-out-down" data-aos-duration="1400" data-aos-delay="550">
+    <a href="#top">
+        <i class="ri-arrow-up-line"></i> 
+        Back to Top
+    </a>
+</div>
+
+
+<div class="icons">
+    <a href="https://web.facebook.com/profile.php?id=61551738759630&sk=about&locale=ar_AR" data-aos="fade-in" data-aos-duration="1400" data-aos-delay="600"><i class="ri-facebook-line"></i></a>
+    <a href="#" data-aos="fade-in" data-aos-duration="1400" data-aos-delay="700"><i class="ri-youtube-fill"></i></a>
+    <a href="#" data-aos="fade-in" data-aos-duration="1400" data-aos-delay="800"><i class="ri-instagram-fill"></i></a>
+</div>
+
+
+
+      </div>
+   
+    
+<!-- JS link -->
+<script src="lightbox-plus-jquery.min.js"></script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    offset:1,
+  });
+
+  // Check if the user is logged in and update button visibility
+  window.onload = function() {
+        const isLoggedIn = localStorage.getItem('loggedIn');
+        if (isLoggedIn === 'true') {
+            document.getElementById('signInBtn').style.display = 'none';  // Hide Sign In button
+            document.getElementById('logoutBtn').style.display = 'inline-block';  // Show Log Out button
+        }
+    };
+
+    // Logout function to clear the login status
+    function logout() {
+        localStorage.removeItem('loggedIn');  // Remove login status from localStorage
+        document.getElementById('logoutBtn').style.display = 'none';  // Hide Log Out button
+        document.getElementById('signInBtn').style.display = 'inline-block';  // Show Sign In button
+        window.location.href = 'Sign In.html';  // Redirect to Sign In page
+    }
+
+    let menu = document.querySelector("#menu-icon");
+    let navlist = document.querySelector(".navlist");
+
+    menu.onclick = () => {
+    navlist.classList.toggle("open");
+};
+
+</script>
+</body>
+</html>
+
+
+
+
+
