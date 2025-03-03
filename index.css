@@ -108,11 +108,16 @@ header {
 
 #menu-icon {
     font-size: 42px;
-    z-index: 10000;
     cursor: pointer;
+    display: block; /* يجب أن يكون مرئياً على الشاشات الصغيرة */
+    z-index: 10000;
     margin-left: 25px;
-    display: none;
 }
+
+.navlist.open {
+    left: 0; /* جعل القائمة تظهر عندما تضغط على الأيقونة */
+}
+
 
 section {
     padding: 0 14%;
