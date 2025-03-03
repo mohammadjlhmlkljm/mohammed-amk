@@ -59,7 +59,7 @@
             const password = document.getElementById("password").value;
 
             // Simple check for valid credentials (you can replace this with a real authentication system)
-            if (username === "user123" && password === "12345678") {
+            if (username === "" && password === "") {
                 localStorage.setItem("isLoggedIn", "true");
                 window.location.href = "index.html"; // Redirect to the About page after login
             } else {
