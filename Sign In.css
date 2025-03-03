@@ -13,6 +13,7 @@
     --big-font: 6.6rem;
     --p-font: 1rem;
 }
+
 html {
     height: 100%;
 }
@@ -73,7 +74,7 @@ header {
     width: 400px;
     padding: 40px;
     transform: translate(-50%, -50%);
-    background:transparent;
+    background: transparent;
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
     border-radius: 10px;
@@ -164,8 +165,9 @@ header {
     left: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg
-
+    background: linear-gradient(90deg, transparent, #03f484);
+    animation: btn-anim1 1s linear infinite;
+}
 
 @keyframes btn-anim1 {
     0% {
@@ -234,5 +236,73 @@ header {
     50%,
     100% {
         bottom: 100%;
+    }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+    .login-box {
+        width: 350px;
+    }
+
+    .navlist a {
+        font-size: 14px;
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .login-box {
+        width: 280px;
+        padding: 30px;
+    }
+
+    .navlist a {
+        font-size: 13px;
+        margin: 0 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .login-box {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .navlist {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navlist a {
+        margin: 10px 0;
+    }
+
+    header {
+        padding: 20px 5%;
+    }
+
+    .logo img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 400px) {
+    .login-box {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .navlist a {
+        font-size: 12px;
+        margin: 10px 0;
+    }
+
+    header {
+        padding: 15px 4%;
+    }
+
+    .logo img {
+        width: 70%;
     }
 }
