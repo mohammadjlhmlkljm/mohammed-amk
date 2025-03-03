@@ -1,87 +1,87 @@
-/* إعدادات القوائم بشكل عام */
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+}
+
+:root {
+    --bg-color: #1f1466;
+    --text-color: #fff;
+    --main-color: #715127;
+    --big-font: 6.6rem;
+    --p-font: 1rem;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-}
-
-/* رأس الصفحة */
-header {
+    background: linear-gradient(#0715b3, #1754cf);
+    background: var(--bg-color);
+    color: var(--text-color);
+    height: 100vh;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 20px;
-    background-color: #333;
-    position: relative;
 }
 
-/* الشعار */
+body:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: url(images/image\ copy.png);
+    position: absolute;
+    clip-path: circle(38% at right 60%);
+    z-index: -1;
+}
+
+.container {
+    width: 80%;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 35px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+}
+
 .logo img {
-    width: 150px;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
 }
 
-/* قائمة التنقل */
 .navlist {
     display: flex;
-    list-style: none;
 }
 
-/* الروابط داخل القائمة */
 .navlist a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-    text-transform: uppercase;
-    font-size: 16px;
-    margin: 0 20px;
-    transition: color 0.3s ease;
+    display: inline-block;
+    margin: 0 35px;
+    color: var(--text-color);
+    font-size: var(--p-font);
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* تأثير على الروابط عند المرور عليها */
 .navlist a:hover {
-    color: #03f484;
+    color: var(--main-color);
+    transform: translateY(-3px);
 }
-
-/* أيقونة القائمة */
-.bx-menu {
-    display: none;  /* إخفاء الأيقونة في الشاشات الكبيرة */
-    font-size: 30px;
-    cursor: pointer;
-    color: #fff;
-}
-
-/* عندما تكون القائمة مفتوحة */
-.navlist.open {
-    display: block;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: #333;
-    width: 200px;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-/* عند تصغير الشاشة */
-@media (max-width: 768px) {
-    .navlist {
-        display: none;  /* إخفاء القائمة في الشاشات الصغيرة */
-        flex-direction: column;
-    }
-
-    .navlist.open {
-        display: block;  /* عرض القائمة عند إضافة الكلاس open */
-    }
-
-    .bx-menu {
-        display: block;  /* إظهار الأيقونة في الشاشات الصغيرة */
-    }
-}
-
 
 .right-content {
     display: flex;
@@ -371,20 +371,6 @@ section {
         width: 100%;
         height: 100%;
         object-fit: contain;
-    }
-}
-@media (max-width: 768px) {
-    .navlist {
-        display: none;  /* إخفاء القائمة في الشاشات الصغيرة */
-        flex-direction: column;
-    }
-
-    .navlist.open {
-        display: block;  /* عرض القائمة عند إضافة الكلاس open */
-    }
-
-    .bx-menu {
-        display: block;  /* إظهار الأيقونة في الشاشات الصغيرة */
     }
 }
 
